@@ -1,7 +1,7 @@
 package pertemuan1;
 import java.util.Scanner;
 
-public class NilaiMahasiswa {
+public class Pemilihan {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         boolean isLulus = true;
