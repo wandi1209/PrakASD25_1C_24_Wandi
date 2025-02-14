@@ -22,6 +22,7 @@ public class Tugas1 {
 
         System.out.print("Masukkan kode plat kendaraan anda : ");
         inputUser = input.next().charAt(0);
+        System.out.println("======================================");
 
         for (int i = 0; i < kode.length; i++) {
             if(inputUser == kode[i]){
@@ -31,5 +32,6 @@ public class Tugas1 {
                 return;
             }
         }
+        input.close();
     }
 }
