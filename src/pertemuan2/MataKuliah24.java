@@ -6,6 +6,16 @@ public class MataKuliah24 {
     int sks;
     int jumlahJam;
 
+    public MataKuliah24(){
+        
+    }
+    public MataKuliah24(String kodeMk, String nama, int sks, int jumlahJam){
+        this.kodeMK = kodeMk;
+        this.nama = nama;
+        this.sks = sks;
+        this.jumlahJam = jumlahJam;
+    }
+
     void tampilInformasi(){
         System.out.println("Kode Mata Kuliah : " + kodeMK);
         System.out.println("Nama Mata Kuliah : " + nama);
@@ -23,13 +33,11 @@ public class MataKuliah24 {
 
     void tambahJam(int jam){
         jumlahJam += jam;
-        System.out.println("Jumlah Jam : " + jumlahJam);
     }
 
     void kurangiJam(int jam){
         if (jumlahJam > jam) {
             jumlahJam -= jam;
-            System.out.println("Jumlah Jam : " + jumlahJam);
         } else {
             System.out.println("Jumlah jam kurang dari " + jam + " jam, tidak dapat dikurangi.");
         }

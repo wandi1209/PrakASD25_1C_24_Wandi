@@ -18,11 +18,12 @@ public class MataKuliahMain24 {
         System.out.println();
 
 
-        MataKuliah24 mk2 = new MataKuliah24();
-        mk2.kodeMK = "BD";
-        mk2.nama = "Basis Data";
-        mk2.sks = 4;
-        mk2.jumlahJam = 2;
+        MataKuliah24 mk2 = new MataKuliah24("BD", "Basis Data", 8, 8);
+        mk2.tampilInformasi();
+        mk2.ubahSKS(4);
+        mk2.kurangiJam(6);
+
+        System.out.println();
         mk2.tampilInformasi();
     }
 }
