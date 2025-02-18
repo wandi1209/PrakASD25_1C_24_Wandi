@@ -28,13 +28,14 @@ public class Mahasiswa24 {
     }
 
     void updateIpk(double ipkBaru){
-        ipk = ipkBaru;
+        if(ipkBaru < 0 || ipkBaru > 4.0){
+            System.out.println("IPK tidakvalid. harus antara 0.0 dan 4.0");
+        } else {
+            ipk = ipkBaru;
+        }
     }
 
     String nilaiKinerja(){
-        if(ipk < 0 || ipk > 4.0){
-            return "IPK tidakvalid. harus antara 0.0 dan 4.0";
-        }
         if(ipk >= 3.5){
             return "Kinerja sangat baik";
         } else if(ipk >= 3.0){
