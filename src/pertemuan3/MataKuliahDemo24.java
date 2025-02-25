@@ -13,10 +13,7 @@ public class MataKuliahDemo24 {
 
         for (int i = 0; i < arrayOfMataKuliah.length; i++) {
             System.out.println("Data Mata Kuliah ke-" + (i+1));
-            System.out.println("Kode        : " + arrayOfMataKuliah[i].kode);
-            System.out.println("Nama        : " + arrayOfMataKuliah[i].nama);
-            System.out.println("SKS         : " + arrayOfMataKuliah[i].sks);
-            System.out.println("Jumlah Jam  : " + arrayOfMataKuliah[i].jumlahJam);
+            arrayOfMataKuliah[i].cetakInfo();
             System.out.println("-------------------------------------------------");
         }
     }
