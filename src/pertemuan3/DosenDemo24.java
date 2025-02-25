@@ -5,7 +5,9 @@ import java.util.Scanner;
 public class DosenDemo24 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        Dosen24[] arrayOfDosen = new Dosen24[3];
+        System.out.print("Masukkan jumlah dosen : ");
+        int jumlahDosen = Integer.parseInt(input.nextLine());
+        Dosen24[] arrayOfDosen = new Dosen24[jumlahDosen];
         String kode, nama, dummy;
         boolean jenisKelamin;
         int usia;
@@ -34,14 +36,11 @@ public class DosenDemo24 {
             arrayOfDosen[i] = new Dosen24(kode, nama, jenisKelamin, usia);
         }
 
-        for (int i = 0; i < arrayOfDosen.length; i++) {
-            System.out.println("Data Dosen ke-" + (i+1));
-            System.out.println("Kode          : " + arrayOfDosen[i].kode);
-            System.out.println("Nama          : " + arrayOfDosen[i].nama);
-            System.out.println("Jenis Kelamin : " + (arrayOfDosen[i].jenisKelamin ? "Pria" : "Wanita"));
-            System.out.println("Usia          : " + arrayOfDosen[i].usia);
-            System.out.println("--------------------------------------------------");
-        }
+        DataDosen24.dataSemuaDosen(arrayOfDosen);
+        DataDosen24.jumlahDosenPerJenisKelamin(arrayOfDosen);
+        DataDosen24.rerataUsiaDosenPerJenisKelamin(arrayOfDosen);
+        DataDosen24.infoDosenPalingTua(arrayOfDosen);
+        DataDosen24.infoDosenPalingMuda(arrayOfDosen);
         
     }
 }
