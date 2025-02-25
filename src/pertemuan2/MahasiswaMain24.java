@@ -1,6 +1,6 @@
 package pertemuan2;
 
-public class MahasiswaMain {
+public class MahasiswaMain24 {
     public static void main(String[] args) {
         Mahasiswa24 mhs1 = new Mahasiswa24();
         mhs1.nama = "Wandi";
