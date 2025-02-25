@@ -1,15 +1,12 @@
 package pertemuan3;
 
+import java.util.Scanner;
 public class MataKuliah24 {
+    public Scanner sc = new Scanner(System.in);
     public String kode;
     public String nama;
     public int sks;
     public int jumlahJam;
-
-    // Konstruktor tanpa parameter
-    public MataKuliah24(){
-
-    }
 
     // Konstruktor dengan parameter lengkap
     public MataKuliah24(String kode, String nama, int sks, int jumlahJam ){
@@ -19,12 +16,15 @@ public class MataKuliah24 {
         this.jumlahJam = jumlahJam;
     }
 
-    // Konstruktor hanya kode dan nama saja
-    public MataKuliah24(String kode, String nama){
-        this.kode = kode;
-        this.nama =nama;
-        sks = 4;
-        jumlahJam = 8;
+    void tambahData(){
+        System.out.print("Kode        : ");
+            kode = sc.nextLine();
+            System.out.print("Nama        : ");
+            nama = sc.nextLine();
+            System.out.print("SKS         : ");
+            sks = Integer.parseInt(sc.nextLine());
+            System.out.print("Jumlah Jam  : ");
+            jumlahJam = Integer.parseInt(sc.nextLine());
     }
 
 }
