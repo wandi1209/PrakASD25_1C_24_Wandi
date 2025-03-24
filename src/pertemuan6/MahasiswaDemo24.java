@@ -8,18 +8,19 @@ public class MahasiswaDemo24 {
         MahasiswaBerprestasi24 list = new MahasiswaBerprestasi24();
 
         for (int i = 0; i < 5; i++) {
-            System.out.println("Data Mahasais Ke-" + (i+1) + " :");
-            System.out.print("Masukkan NIM : ");
+            System.out.println("Masukkan Data Mahasiswa Ke-" + (i+1) + " :");
+            System.out.print("NIM : ");
             String nim = input.nextLine();
-            System.out.print("Masukkan Nama : ");
+            System.out.print("Nama : ");
             String nama = input.nextLine();
-            System.out.print("Masukkan Kelas : ");
+            System.out.print("Kelas : ");
             String kelas = input.nextLine();
-            System.out.print("Masukkan IPK : ");
-            int ipk = input.nextInt();
+            System.out.print("IPK : ");
+            double ipk = input.nextDouble();
             input.nextLine();
             Mahasiswa24 mahasiswa = new Mahasiswa24(nim, nama, kelas, ipk);
             list.tambah(mahasiswa);
+            System.out.println("---------------------------------");
         }
 
         System.out.println("Data mahasiswa sebelum sorting:");
@@ -27,6 +28,10 @@ public class MahasiswaDemo24 {
 
         System.out.println("Data Mahasiswa setelah sorting berdasarka IPK (DESC) :");
         list.bubbleSort();
+        list.tampil();
+
+        System.out.println("Data yang sudah terurut menggunakan SELECTION SORT (ASC)");
+        list.selectionSort();
         list.tampil();
     }
 }
