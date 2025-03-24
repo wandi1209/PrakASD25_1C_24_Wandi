@@ -1,8 +1,12 @@
 package pertemuan7;
 
 public class MahasiswaBerprestasi24 {
-    Mahasiswa24[] listMhs = new Mahasiswa24[5];
+    Mahasiswa24[] listMhs;
     int idx;
+
+    MahasiswaBerprestasi24(int jumMhs){
+        listMhs = new Mahasiswa24[jumMhs];
+    }
 
     void tambah(Mahasiswa24 m){
         if (idx < listMhs.length) {
