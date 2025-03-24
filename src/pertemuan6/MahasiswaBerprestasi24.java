@@ -49,8 +49,8 @@ public class MahasiswaBerprestasi24 {
     void insertionSort(){
         for (int i = 0; i < listMhs.length; i++) {
             Mahasiswa24 temp = listMhs[i];
-            int  j=1;
-            while (j>0 && listMhs[j-1].ipk > temp.ipk) {
+            int  j=i;
+            while (j>0 && listMhs[j-1].ipk < temp.ipk) {
                 listMhs[j] = listMhs[j-1];
                 j--;
             }   
