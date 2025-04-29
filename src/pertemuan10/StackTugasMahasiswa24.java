@@ -56,6 +56,28 @@ public class StackTugasMahasiswa24 {
         }
     }
 
+    public Mahasiswa24 peek_terbawah_24(){
+        if(!isEmpty_24()){
+            StackTugasMahasiswa24 tempStack = new StackTugasMahasiswa24(size);
+
+            while(!isEmpty_24()){
+                tempStack.push_24(pop_24());
+            }
+
+            Mahasiswa24 terbawah = tempStack.peek_24();
+
+            while(!tempStack.isEmpty_24()){
+                push_24(tempStack.pop_24());
+            }
+
+            return terbawah;
+
+        } else {
+            System.out.println("Stack Kosong! Tidak ada tugas yang dikumpulkan");
+            return null;
+        }
+    }
+
     public void print_24(){
         for (int i = top; i >= 0; i--) {
             System.out.println(stack[i].nama + "\t" + stack[i].nim + "\t" + stack[i].kelas);
