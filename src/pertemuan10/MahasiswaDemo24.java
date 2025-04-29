@@ -15,6 +15,7 @@ public class MahasiswaDemo24 {
             System.out.println("3. Melihat Tugas Teratas");
             System.out.println("4. Melihat Tugas Terbawah");
             System.out.println("5. Melihat Daftar Tugas");
+            System.out.println("6. Jumlah Tugas Dikumpulkan");
             System.out.print("Pilih : ");
             pilih = scan.nextInt();
             scan.nextLine();
@@ -58,9 +59,17 @@ public class MahasiswaDemo24 {
                     System.out.println("Nama\tNim\tKelas");
                     stack.print_24();
                     break;
+                case 6:
+                    int jumlahKumpul = stack.hitungJumlahKumpul_24();
+                    if(jumlahKumpul != 0){
+                        System.out.println("\nJumlah Tugas yang dikumpukan : " + jumlahKumpul);
+                    } else {
+                        System.out.println("Tidak ada tugas yang dikumpulkan.");
+                    }
+                    break;
                 default:
                     System.out.println("Pilihan tidak valid.");
             }
-        } while (pilih >= 1 && pilih <= 5);
+        } while (pilih >= 1 && pilih <= 6);
     }
 }

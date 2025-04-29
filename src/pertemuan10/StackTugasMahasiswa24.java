@@ -2,8 +2,7 @@ package pertemuan10;
 
 public class StackTugasMahasiswa24 {
     Mahasiswa24[] stack;
-    int top;
-    int size;
+    int top, size, count;
 
     StackTugasMahasiswa24(int size){
         this.size = size;
@@ -31,6 +30,7 @@ public class StackTugasMahasiswa24 {
         if(!isFull_24()){
             top++;
             stack[top] = mhs;
+            count++;
         } else {
             System.out.println("Stack penuh! Tidak bisa menambahkan tugas lagi.");
         }
@@ -71,11 +71,14 @@ public class StackTugasMahasiswa24 {
             }
 
             return terbawah;
-
         } else {
             System.out.println("Stack Kosong! Tidak ada tugas yang dikumpulkan");
             return null;
         }
+    }
+
+    public int hitungJumlahKumpul_24(){
+        return count;
     }
 
     public void print_24(){
