@@ -32,7 +32,7 @@ public class AntrianLayanan24 {
         if(isEmpty_24()){
             System.out.println("Antrian kosong");
         } else {
-            System.out.print("Mahasiswa terdepan: ");
+            System.out.println("Mahasiswa terdepan: ");
             System.out.println("NIM - NAMA - PRODI - KELAS");
             data[front].tampilkanData_24();
         }
@@ -84,6 +84,16 @@ public class AntrianLayanan24 {
         front = (front + 1) % max;
         size--;
         return mhs;
+    }
+
+    public void lihatAkhir24(){
+        if (isEmpty_24()) {
+            System.out.println("Antrian kosong");
+        } else {
+            System.out.print("Mahasiswa antrian belakang: ");
+            System.out.println("NIM - NAMA - PRODI - KELAS");
+            data[rear].tampilkanData_24();
+        }
     }
 
     public int getJumlahAntrian(){
