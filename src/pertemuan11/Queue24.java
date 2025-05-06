@@ -32,12 +32,14 @@ public class Queue24 {
             System.out.println("Elemen Terdepan: " + data[front]);
         } else {
             System.out.println("Queue masih kosong");
+            System.exit(1);
         }
     }
 
     public void print_24(){
         if(isEmpty_24()){
             System.out.println("Queue masih kosong");
+            System.exit(1);
         } else {
             int i = front;
             while (i != rear) {
@@ -56,12 +58,14 @@ public class Queue24 {
             System.out.println("Queue berhasil dikosongkan");
         } else {
             System.out.println("Queue masih kosong");
+            System.exit(1);
         }
     }
 
     public void enqueue_24(int dt){
         if(isFull_24()){
             System.out.println("Queue sudah penuh");
+            System.exit(1);
         } else {
             if(isEmpty_24()){
                 front = rear = 0;
@@ -81,6 +85,7 @@ public class Queue24 {
         int dt = 0;
         if(isEmpty_24()){
             System.out.println("Queue masih kosong");
+            System.exit(1);
         } else {
             dt = data[front];
             size--;
