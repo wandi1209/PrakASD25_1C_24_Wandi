@@ -34,7 +34,7 @@ public class SLLMain24 {
                 input.nextLine();
                 newMhs = new Mahasiswa24(nim, nama, kelas, ipk);
             }
-            
+
             switch (menu) {
                 case 1:
                     sll.addFirst_24(newMhs);
@@ -57,8 +57,20 @@ public class SLLMain24 {
                     sll.print_24();
                     break;
                 case 6:
-                    System.out.println("Sistem berhenti");
-                    System.exit(0);
+                    System.out.println("Sistem berhenti\n");
+
+                    System.out.println("data index 1 : ");
+                    sll.getData_24(1);
+
+                    System.out.println("data mahasiswa an Bimon berada pada index  : " + sll.indexOf_24("bimon"));
+                    System.out.println();
+
+                    sll.removeFirst_24();
+                    sll.removeLast_24();
+                    sll.print_24();
+                    sll.removeAt_24(0);
+                    sll.print_24();
+                    return;
                 default:
                     System.out.println("Masukkan pilihan yang sesuai.");
             }
