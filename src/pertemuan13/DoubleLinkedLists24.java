@@ -41,11 +41,11 @@ public class DoubleLinkedLists24 {
     public void add_24(int item, int index) throws Exception {
         if(isEmpty_24()){
             addFirst_24(item);
-        } else if (index < 0 || index > size){
+        } else if (index < 1 || index > size){
             throw new Exception("Nilai indeks di luar batas");
         } else {
             Node24 current = head;
-            int i = 0;
+            int i = 1;
             while (i < index) {
                 current = current.next;
                 i++;
@@ -118,11 +118,11 @@ public class DoubleLinkedLists24 {
     public void remove_24(int index) throws Exception {
         if (isEmpty_24() || index >= size) {
             throw new Exception("Nilai indeks di luar batas");
-        } else if(index == 0){
+        } else if(index == 1){
             removeFirst_24();
         } else {
             Node24 current = head;
-            int i = 0;
+            int i = 1;
             while (i < index) {
                 current = current.next;
                 i++;
@@ -164,7 +164,7 @@ public class DoubleLinkedLists24 {
             throw new Exception("Nilai indeks  di luar battas");
         }
         Node24 tmp = head;
-       for (int i = 0; i < index; i++) {
+       for (int i = 1; i < index; i++) {
             tmp = tmp.next;
        }
         return tmp.data;
