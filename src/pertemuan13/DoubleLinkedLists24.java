@@ -86,4 +86,58 @@ public class DoubleLinkedLists24 {
             System.out.println("Linked Lists Kosong");
         }
     }
+
+    public void removeFirst_24() throws Exception {
+        if(isEmpty_24()){
+            throw new Exception("Linked List masih kosongg. tidak dapat dihapus.");
+        } else if(size == 1) {
+            removeLast_24();
+        } else {
+            head = head.next;
+            head.prev = null;
+            size--;
+        }
+    }
+
+    public void removeLast_24() throws Exception {
+        if (isEmpty_24()) {
+            throw new Exception("Linked List masih kosongg. tidak dapat dihapus.");
+        } else if (head.next == null){
+            head = null;
+            size--;
+            return;
+        } 
+        Node24 current = head;
+        while (current.next.next != null) {
+            current = current.next;
+        }
+        current.next = null;
+        size--;
+    }
+
+    public void remove_24(int index) throws Exception {
+        if (isEmpty_24() || index >= size) {
+            throw new Exception("Nilai indeks di luar batas");
+        } else if(index == 0){
+            removeFirst_24();
+        } else {
+            Node24 current = head;
+            int i = 0;
+            while (i < index) {
+                current = current.next;
+                i++;
+            }
+            if(current.next == null){
+                current.prev.next = null;
+            } else if (current.prev == null) {
+                current = current.next;
+                current.prev = null;
+                head = current;
+            } else {
+                current.prev.next = current.next;
+                current.next.prev = current.prev;
+            }
+            size--;
+        }
+    }
 }
