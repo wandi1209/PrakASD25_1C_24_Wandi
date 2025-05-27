@@ -140,4 +140,33 @@ public class DoubleLinkedLists24 {
             size--;
         }
     }
+
+    public int getFirst_24() throws Exception {
+        if(isEmpty_24()){
+            throw new Exception("Linked List kosong");
+        }
+        return head.data;
+    }
+
+    public int getLast_24() throws Exception {
+        if(isEmpty_24()){
+            throw new Exception("Linked List kosong");
+        }
+        Node24 tmp = head;
+        while (tmp.next != null) {
+            tmp = tmp.next;
+        }
+        return tmp.data;
+    }
+
+    public int get_24(int index) throws Exception {
+        if(isEmpty_24() || index >= size){
+            throw new Exception("Nilai indeks  di luar battas");
+        }
+        Node24 tmp = head;
+       for (int i = 0; i < index; i++) {
+            tmp = tmp.next;
+       }
+        return tmp.data;
+    }
 }

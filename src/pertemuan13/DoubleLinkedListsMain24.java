@@ -16,28 +16,8 @@ public class DoubleLinkedListsMain24 {
         dll.print_24();
         System.out.println("Size : " + dll.size_24());
         System.out.println("===================================");
-        dll.clear_24();
-        dll.print_24();
-        System.out.println("Size : " + dll.size_24());
-
-        dll.addLast_24(50);
-        dll.addLast_24(40);
-        dll.addLast_24(10);
-        dll.addLast_24(20);
-        dll.print_24();
-        System.out.println("Size : " + dll.size_24());
-        System.out.println("===================================");
-        dll.removeFirst_24();
-        dll.print_24();
-        System.out.println("Size : " + dll.size_24());
-        System.out.println("===================================");
-        dll.removeLast_24();
-        dll.print_24();
-        System.out.println("Size : " + dll.size_24());
-        System.out.println("===================================");
-        dll.remove_24(1);
-        dll.print_24();
-        System.out.println("Size : " + dll.size_24());
-
+        System.out.println("Data awal pada Linked Lists adalah : " + dll.getFirst_24());
+        System.out.println("Data akhir pada Linked Lists adalah : " + dll.getLast_24());
+        System.out.println("Data indeks ke-1 pada Linked Lists adalah : " + dll.get_24(1));
     }
 }
