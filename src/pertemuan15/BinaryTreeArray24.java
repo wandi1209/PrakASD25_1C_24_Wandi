@@ -1,4 +1,4 @@
-package pertemuan14;
+package pertemuan15;
 
 public class BinaryTreeArray24 {
     Mahasiswa24[] dataMahasiswa;
@@ -22,4 +22,22 @@ public class BinaryTreeArray24 {
             }
         }
     }
+
+    void add_24(Mahasiswa24 data) {
+        if (idxLast + 1 < dataMahasiswa.length) {
+            idxLast++;
+            dataMahasiswa[idxLast] = data;
+        } else {
+            System.out.println("Tree sudah penuh!");
+        }
+    }
+
+    void traversePreOrder_24(int idxStart) {
+        if (idxStart <= idxLast && dataMahasiswa[idxStart] != null) {
+            dataMahasiswa[idxStart].tampilkanInformasi();
+            traversePreOrder_24(2 * idxStart + 1);
+            traversePreOrder_24(2 * idxStart + 2); 
+        }
+    }
+
 }

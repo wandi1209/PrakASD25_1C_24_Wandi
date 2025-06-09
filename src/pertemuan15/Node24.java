@@ -1,4 +1,4 @@
-package pertemuan14;
+package pertemuan15;
 
 public class Node24 {
     Mahasiswa24 mahasiswa;

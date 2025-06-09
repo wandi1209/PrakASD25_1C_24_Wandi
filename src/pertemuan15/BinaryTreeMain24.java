@@ -1,4 +1,4 @@
-package pertemuan14;
+package pertemuan15;
 
 public class BinaryTreeMain24 {
     public static void main(String[] args) {
@@ -36,5 +36,17 @@ public class BinaryTreeMain24 {
         bst.delete_24(3.57);
         System.out.println("\nDaftar semua maahasiswa setelah penghapusan 1 mahasiswa (in order traversal)");
         bst.traverseInOrder_24(bst.root);
+
+        bst.addRekursif_24(new Mahasiswa24("244160111", "Wandi", "A", 3.62));
+        bst.addRekursif_24(new Mahasiswa24("244160112", "Fajar", "B", 3.41));
+        bst.addRekursif_24(new Mahasiswa24("244160113", "Vina", "C", 3.75));
+        System.out.println("\nDaftar semua mahasiswa setelah penambahan 3 mahasiswa dengan rekursif : ");
+        bst.traverseInOrder_24(bst.root);
+        
+        bst.cariMinIpk();
+        bst.cariMaxIpk();
+
+        System.out.println("\nMahasiswa yang IPK dibawah 3.7");
+        bst.tampilkanMahasiswaIPKdiAtas(bst.root, 3.7);
     }
 }

@@ -1,4 +1,4 @@
-package pertemuan14;
+package pertemuan15;
 
 public class BinaryTreeArrayMain24 {
     public static void main(String[] args) {
@@ -17,5 +17,12 @@ public class BinaryTreeArrayMain24 {
         bta.populateData_24(dataMahasiswa, idxLast);
         System.out.println("\nInOrder Traversal Mahasiswa: ");
         bta.traverseInOrder_24(0);
+
+        bta.add_24(new Mahasiswa24("244160111", "Wandi", "A", 3.62));
+        bta.add_24(new Mahasiswa24("244160112", "Fajar", "B", 3.41));
+        bta.add_24(new Mahasiswa24("244160113", "Vina", "C", 3.75));
+
+        System.out.println("PreOrder:");
+        bta.traversePreOrder_24(0);
     }
 }
